@@ -1,6 +1,6 @@
 # Glutton-c!
 
-![Glutton-c demo](https://gluttonc.chesterdoran.com/glutton-c-demo.gif "Glutton-c!")
+![Glutton-c demo](glutton-c-demo.gif "Glutton-c!")
 
 
 Help c eat as much food as he can while avoiding the enemies!
