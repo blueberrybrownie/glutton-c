@@ -8,4 +8,4 @@ Played in your browser's address bar.
 
 https://gluttonc.chesterdoran.com
 <br><br>
-Works best on Firefox on macOS or Linux.
+Unfortunately, browser support is limited. Works best on Firefox on macOS or Linux.
