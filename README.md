@@ -8,4 +8,4 @@ Played in your browser's address bar.
 
 Unfortunately, browser support is limited. Works best on Firefox on macOS or Linux.
 
-[Play Glutton-c!](gluttonc.chesterdoran.com)
+[Play Glutton-c!](https://gluttonc.chesterdoran.com)
