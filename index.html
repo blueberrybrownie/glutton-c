@@ -24,6 +24,7 @@
         font-size: 14px;
       }
       .bookmarklet {
+        display: inline-block;
         background-color: #f4f4f4;
         padding: 5px;
         border-radius: 3px;
@@ -31,7 +32,7 @@
         color: #000;
         text-decoration: none;
       }
-      .error {display: none; font-weight: bold;}
+      .error { display: none; color: red; font-weight: bold;}
 
       @media (hover: none) and (pointer: coarse) {
         .error {
@@ -46,9 +47,8 @@
    <h2>Glutton-c!</h2>
 
     <p>
-      <span class="error">Sorry, Glutton-c! requires a non-mobile device to play. :(<br><br><br>
-      </span>
-
+      <span class="error">Sorry, <i>Glutton-c!</i> requires a non-mobile device to play. :(<br><br><br></span>
+      
       High Score: <span id="high-score">--</span><br><br>
       Help c eat as much food as he can while avoiding the enemies!<br>
       Played in your browser's address bar. (Works best on Firefox)<br><br>
