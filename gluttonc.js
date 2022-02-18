@@ -20,8 +20,6 @@ var powerupTime;
 var startAudio = new Audio('https://gluttonc.chesterdoran.com/start.wav');
 var deathAudio = new Audio('https://gluttonc.chesterdoran.com/death.wav');
 
-var button = document.querySelector("#gluttonc-button");
-
 
 // Arrays
 
@@ -409,7 +407,7 @@ function gameLogic() {
     
     // Save high score
     
-    if ((button !== null) && (localStorage.getItem("highScore") < score)) {
+    if ((localStorage.getItem("highScore") < score)) {
       localStorage.setItem("highScore", score);
     }
     
@@ -423,9 +421,7 @@ function gameLogic() {
                        ' '+String.fromCharCode(0x200D)+' '+"Score:"+
                        ' '+String.fromCharCode(0x200D)+' '+score
       );
-      if (button !== null) {
-        displayScore();
-      }
+      displayScore();
     }, 200);
 
     // Press any key to restart after 1 second
@@ -505,7 +501,4 @@ function displayScore() {
     document.getElementById("high-score").innerHTML = localStorage.getItem("highScore"); 
   }
 }
-
-if (button !== null) {
-  displayScore();
-}
+displayScore();
