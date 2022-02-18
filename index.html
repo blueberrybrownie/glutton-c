@@ -7,29 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Glutton-c!</title>
 
-    <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="icon" href="/favicon.ico">
     <meta name="theme-color" content="#ffffff">
 
-    <script defer src="gluttonc.js"></script>
+    <script src="gluttonc.js"></script>
     
     <style type="text/css">
       h2 {
         font-family: serif;
+        margin-bottom: 5px;
       }
       p {
         font-family: monospace;
         font-size: 14px;
       }
-      .error_page {display: none;}
+      .bookmarklet {
+        background-color: #f4f4f4;
+        padding: 5px;
+        border-radius: 3px;
+        border: 1px solid #8F8F9D;
+        color: #000;
+        text-decoration: none;
+      }
+      .error {display: none; font-weight: bold;}
 
       @media (hover: none) and (pointer: coarse) {
-        .welcome_page {
-          display: none; 
-        }
-        .error_page {
+        .error {
           display: block; 
         } 
       }
@@ -39,12 +44,19 @@
   <body>
    
    <h2>Glutton-c!</h2>
+
     <p>
-      <span class="error_page"><strong>Sorry, Glutton-c! requires a non-mobile device to play. :(</strong><br><br><br></span>
+      <span class="error">Sorry, Glutton-c! requires a non-mobile device to play. :(<br><br><br>
+      </span>
+
       High Score: <span id="high-score">--</span><br><br>
       Help c eat as much food as he can while avoiding the enemies!<br>
       Played in your browser's address bar. (Works best on Firefox)<br><br>
-      <a href="javascript:(function(){ var jsCode=document.createElement('script');jsCode.setAttribute('src','https://gluttonc.chesterdoran.com/gluttonc.js?bustcache='+new Date().getTime());document.body.appendChild(jsCode);}());">Bookmark this</a> to play me on any webpage!<br><br><br>
+    </p>
+
+    <a class="bookmarklet" href="javascript:(function(){ var jsCode=document.createElement('script');jsCode.setAttribute('src','https://gluttonc.chesterdoran.com/gluttonc.js?bustcache='+new Date().getTime());document.body.appendChild(jsCode);}());">Play Glutton-c!</a><p style="display: inline;"> ( &#x2190; Drag this to your bookmarks to play me anywhere!)</p><br><br>
+    
+    <p>
       Help:<br><br>
       c&nbsp;&nbsp;You<br>
       &middot;&nbsp;&nbsp;Food<br>
@@ -52,9 +64,8 @@
       &#9731;&nbsp;&nbsp;Enemy<br>
       &#9730;&nbsp;&nbsp;Shield<br><br><br>
       Controls:<br><br>
-      [Up Key]&nbsp;&nbsp;Jump<br><br><br>
+      [Up Key]&nbsp;&nbsp;Jump<br><br>
     </p>
-    <button id="gluttonc-button" onclick="toggleSound()" type="button">Sound: On</button> 
     
   </body>
 </html>

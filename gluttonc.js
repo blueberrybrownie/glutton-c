@@ -390,18 +390,8 @@ function gameLogic() {
 	else {
     
 		clearInterval(runGame); // Stop game interval
-    
-    // Check if sound is on / button can't be found and play tune
+    deathAudio.play();
 
-    try {
-      if (button.innerHTML == "Sound: On") {
-        deathAudio.play();
-      }
-    }
-    catch(e) { // Button is not found, assume sound is on
-      deathAudio.play();
-    }
-    
     
     // Reset game
 
@@ -490,18 +480,7 @@ function startGame() {
       keyPress();
       score = 0; // Reset score
       runGame = setInterval(gameLogic, 100);
-
-      // Check if sound is on / button can't be found and play tune
-      
-      try {
-        if (button.innerHTML == "Sound: On") {
-          startAudio.play();
-        }
-      }
-      catch(e) { // Button is not found, assume sound is on
-        startAudio.play();
-      }
-      
+      startAudio.play();
     }
     
   };
@@ -517,27 +496,6 @@ history.replaceState(null, '', "#"+' '+String.fromCharCode(0x200D)+' '+"PRESS"+
                  ' '+String.fromCharCode(0x200D)+' '+"PLAY");
 
 startGame();
-
-
-// Toggle sound
-
-if (button !== null) {
-  if (localStorage.getItem("soundPref") == "Sound: Off") { // Toggle button based on memory
-    button.innerHTML = "Sound: Off";
-  } 
-}
-
-function toggleSound() {
-  
-  if (button.innerHTML == "Sound: On") {
-    button.innerHTML = "Sound: Off";
-    localStorage.setItem("soundPref", button.innerHTML);
-  }
-  else {
-    button.innerHTML = "Sound: On";
-    localStorage.setItem("soundPref", button.innerHTML);
-  }
-}
 
 
 // Display high score in HTML if one has been set
