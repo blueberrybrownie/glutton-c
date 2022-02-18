@@ -15,6 +15,22 @@
     <script defer src="gluttonc.js"></script>
     
     <style type="text/css">
+      html, body {
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      .content {
+        flex: 1 0 auto;
+      }
+      footer {
+        flex-shrink: 0;
+      }
+
       h2 {
         font-family: serif;
         margin-bottom: 5px;
@@ -44,18 +60,19 @@
 
   <body>
    
-   <h2>Glutton-c!</h2>
+  <div class="content">
+    <h2>Glutton-c!</h2>
 
     <p>
       <span class="error">Sorry, <i>Glutton-c!</i> requires a non-mobile device to play. :(<br><br><br></span>
-      
+        
       High Score: <span id="high-score">--</span><br><br>
       Help c eat as much food as he can while avoiding the enemies!<br>
       Played in your browser's address bar. (Works best on Firefox)<br><br>
     </p>
 
     <p style="display: inline;">Drag this &#8594; </p><a class="bookmarklet" href="javascript:(function(){ var jsCode=document.createElement('script');jsCode.setAttribute('src','https://gluttonc.chesterdoran.com/gluttonc.js?bustcache='+new Date().getTime());document.body.appendChild(jsCode);}());">Play Glutton-c!</a><p style="display: inline;"> into your bookmarks to play me anywhere!</p><br><br>
-    
+      
     <p>
       Help:<br><br>
       c&nbsp;&nbsp;You<br>
@@ -64,8 +81,13 @@
       &#9731;&nbsp;&nbsp;Enemy<br>
       &#9730;&nbsp;&nbsp;Shield<br><br><br>
       Controls:<br><br>
-      [Up Key]&nbsp;&nbsp;Jump
+      [Up Key]&nbsp;&nbsp;Jump<br><br>
     </p>
+  </div>
     
+  <footer>
+    <p style="font-size: 12px; font-family: sans-serif;">&copy; 2022 <a href="https://chesterdoran.com">Chester Doran</a> | View on <a href="https://github.com/blueberrybrownie/glutton-c">Github</a>.</p>
+  </footer>
+
   </body>
 </html>
